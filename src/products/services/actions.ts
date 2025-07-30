@@ -24,7 +24,7 @@ export const getProducts = async({ filterKey }: GetProductsOptions): Promise<Pro
 
 export const getProductById = async(id: number): Promise<Product> => {
 
-  // sleep(2);
+  sleep(5);
 
   const { data } = await productsApi.get<Product>(`/products/${id}`);
   return data;
