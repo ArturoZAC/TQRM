@@ -8,6 +8,8 @@ export interface Product {
   rating?    : Rating;
 }
 
+export type ProductLike = Omit<Product, "rating" | "id"> & Partial<Pick<Product,"id">>;
+
 export interface Rating {
   rate : number;
   count: number;
